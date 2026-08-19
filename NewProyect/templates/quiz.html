@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test de hábitos — 1.5°</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+<div class="quiz-shell">
+
+  <div class="quiz-nav">
+    <div class="logo"><span class="dot"></span>1.5°</div>
+    <a href="{{ url_for('index') }}" class="back">← Volver al inicio</a>
+  </div>
+
+  <div class="quiz-main">
+    <div class="frame-wrap">
+
+      <!-- pantalla de preguntas -->
+      <div class="quiz-card" id="quizCard">
+        <div class="progress" id="progress"></div>
+        <div class="q-mark" id="qMark">PREGUNTA 1 / 10</div>
+        <div class="q-text" id="qText"></div>
+        <div class="q-options" id="qOptions"></div>
+        <div class="q-actions">
+          <button class="q-back" id="btnBack">← Anterior</button>
+          <button class="q-next" id="btnNext" disabled>Siguiente</button>
+        </div>
+      </div>
+
+      <!-- pantalla de resultado -->
+      <div class="quiz-card hidden" id="resultCard">
+        <div class="result-eyebrow">Tu resultado</div>
+        <div class="result-title" id="resultTitle"></div>
+        <p class="result-text" id="resultText"></p>
+        <div class="result-bar-track">
+          <div class="result-bar-fill" id="resultBar" style="width:0%;"></div>
+        </div>
+        <div class="result-actions">
+          <a href="{{ url_for('index') }}" class="btn-ghost">Volver al inicio</a>
+          <button class="q-next" id="btnRestart">Repetir el test</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/quiz.js') }}"></script>
+</body>
+</html>

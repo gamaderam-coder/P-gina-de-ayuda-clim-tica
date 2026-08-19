@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1.5° — Actúa antes de que sea tarde</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+<nav>
+  <div class="logo"><span class="dot"></span>1.5°</div>
+  <ul class="nav-links">
+    <li><a href="#" class="current">Inicio</a></li>
+    <li><a href="#accion">Sobre nosotros</a></li>
+    <li><a href="#acciones">Acciones</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <div class="nav-icon" aria-label="Menú">☰</div>
+</nav>
+
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow">Plantilla de landing page · Clima</div>
+    <h1>El límite es<br><span class="em">1.5 grados.</span><br>Aún podemos<br>quedarnos dentro.</h1>
+    <p class="hero-text">
+      Descubre formas para ayudar a mitigar la contaminación del planeta, completa un Test opcional para mejorar ciertos hábitos personales.
+    </p>
+    <div class="hero-actions">
+      <a href="#acciones" class="btn-primary">Descubre cómo actuar →</a>
+      <a href="#accion" class="btn-ghost">Ver el estado del planeta</a>
+    </div>
+    <div class="social">
+      <a href="#" aria-label="Facebook">f</a>
+      <a href="#" aria-label="Twitter">𝕏</a>
+      <a href="#" aria-label="Instagram">ig</a>
+    </div>
+  </div>
+
+  <div class="ring-stage">
+    <svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#e8c15a"/>
+          <stop offset="55%" stop-color="#d4a017"/>
+          <stop offset="100%" stop-color="#4caf6d"/>
+        </linearGradient>
+        <linearGradient id="ringGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#7fd39a"/>
+          <stop offset="100%" stop-color="#d4a017"/>
+        </linearGradient>
+      </defs>
+
+      <!-- dotted texture ring -->
+      <circle cx="300" cy="300" r="230" fill="none" stroke="url(#ringGrad)" stroke-width="1.4" stroke-dasharray="1 7" opacity="0.55"/>
+
+      <!-- outer rotating ring -->
+      <g class="ring-outer">
+        <circle cx="300" cy="300" r="255" fill="none" stroke="url(#ringGrad)" stroke-width="2" stroke-dasharray="18 14" opacity="0.5"/>
+      </g>
+
+      <!-- warming stripes arc (signature: concentric bands hot→cool) -->
+      <circle cx="300" cy="300" r="205" fill="none" stroke="#d4a017" stroke-width="10" opacity="0.9"/>
+      <circle cx="300" cy="300" r="188" fill="none" stroke="#c98f22" stroke-width="8" opacity="0.85"/>
+      <circle cx="300" cy="300" r="173" fill="none" stroke="#a99a3a" stroke-width="7" opacity="0.8"/>
+      <circle cx="300" cy="300" r="160" fill="none" stroke="#7fae55" stroke-width="6" opacity="0.85"/>
+      <circle cx="300" cy="300" r="149" fill="none" stroke="#4caf6d" stroke-width="5" opacity="0.9"/>
+
+      <!-- core disc -->
+      <circle cx="300" cy="300" r="130" fill="#0f1310" stroke="rgba(242,239,233,0.08)" stroke-width="1"/>
+
+      <text x="300" y="278" text-anchor="middle" class="core-label">TEMPERATURA GLOBAL / META 2030</text>
+      <text x="300" y="335" text-anchor="middle" class="core-number" font-size="58">+1.5<tspan class="warn" font-size="30">°C</tspan></text>
+      <text x="300" y="365" text-anchor="middle" class="core-label" fill="#7fd39a">límite del Acuerdo de París</text>
+
+      <!-- small orbit rings echoing reference layout -->
+      <g class="ring-outer-2">
+        <circle cx="80" cy="120" r="22" fill="none" stroke="var(--gold-soft)" stroke-width="3"/>
+        <circle cx="530" cy="470" r="30" fill="none" stroke="var(--green-soft)" stroke-width="3"/>
+        <circle cx="520" cy="90" r="12" fill="none" stroke="var(--gold-soft)" stroke-width="3"/>
+        <circle cx="60" cy="470" r="16" fill="none" stroke="var(--green-soft)" stroke-width="3"/>
+      </g>
+    </svg>
+
+    <div class="float-dot" style="top:6%; left:12%; width:10px; height:10px; background:var(--gold-soft); box-shadow:0 0 14px var(--gold-soft);"></div>
+    <div class="float-dot" style="bottom:10%; right:8%; width:14px; height:14px; background:var(--green-soft); box-shadow:0 0 16px var(--green-soft); animation-delay:2s;"></div>
+    <div class="float-dot" style="top:45%; right:2%; width:7px; height:7px; background:var(--gold-soft); animation-delay:4s;"></div>
+  </div>
+</section>
+
+<div class="stat-strip" id="accion">
+  <div class="stat">
+    <div class="stat-num">+1.36°C</div>
+    <div class="stat-label">de calentamiento global respecto a la era preindustrial, 2025.</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">421 ppm</div>
+    <div class="stat-label">concentración de CO₂ en la atmósfera, el nivel más alto en 800.000 años.</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">6 años</div>
+    <div class="stat-label">de margen restante al ritmo actual de emisiones para no superar 1.5°C.</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">73%</div>
+    <div class="stat-label">de las emisiones globales provienen de energía y transporte.</div>
+  </div>
+</div>
+
+<section class="section" id="acciones">
+  <div class="section-head">
+    <h2>Tres formas de reducir tu huella, empezando hoy.</h2>
+    <p>Formas más comúnes de ayudar al planeta.</p>
+  </div>
+  <div class="card-grid">
+    <div class="card">
+      <div class="mark">01 · ENERGÍA</div>
+      <h3>Elige energía renovable</h3>
+      <p>Cambiar a un proveedor de energía limpia puede reducir tu huella de carbono doméstica hasta en un 30%.</p>
+    </div>
+    <div class="card">
+      <div class="mark">02 · MOVILIDAD</div>
+      <h3>Repiensa tu transporte</h3>
+      <p>Caminar, pedalear o compartir trayecto disminuye directamente las emisiones del sector con mayor impacto.</p>
+    </div>
+    <div class="card">
+      <div class="mark">03 · CONSUMO</div>
+      <h3>Consume con conciencia</h3>
+      <p>Priorizar productos locales y de temporada reduce emisiones asociadas al transporte y almacenamiento.</p>
+    </div>
+  </div>
+</section>
+
+<footer id="contacto">
+  <h2>El planeta no espera. <span style="color:var(--gold-soft); font-style:italic;">Tampoco nosotros.</span></h2>
+  <p class="sub">Súmate al movimiento y recibe una acción climática nueva cada semana.</p>
+  <a href="{{ url_for('quiz') }}" class="btn-primary">Comienza el test →</a>
+
+  <div class="foot-meta">
+    <span>© 2026 1.5° — Iniciativa climática</span>
+    <span>Inicio · Sobre nosotros · Blog · Contacto</span>
+  </div>
+</footer>
+
+</body>
+</html>
